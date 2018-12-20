@@ -1,5 +1,5 @@
 #
-# Copyright 2013-2017 The StatiX Project
+# Copyright 2013-2017 The Lineage Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -17,17 +17,17 @@
 # Sample: This is where we'd set a backup provider if we had one
 # $(call inherit-product, device/sample/products/backup_overlay.mk)
 
+# Inherit some common stuff.
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+
 # Inherit from the common product configuration
 $(call inherit-product, device/huawei/angler/aosp_angler.mk)
-
-# Inherit statix's custom configuration
-$(call inherit-product, $(TOPDIR)vendor/statix/config/common.mk)
 
 # Screen Resolution for the Bootanimation
 TARGET_SCREEN_HEIGHT := 2560
 TARGET_SCREEN_WIDTH := 1440
 
-PRODUCT_NAME := statix_angler
+PRODUCT_NAME := lineage_angler
 PRODUCT_DEVICE := angler
 PRODUCT_BRAND := google
 PRODUCT_MODEL := Nexus 6P
